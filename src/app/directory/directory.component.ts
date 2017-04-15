@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+
 
 @Component({
   selector: 'app-directory',
@@ -7,12 +7,12 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./directory.component.css']
 })
 export class DirectoryComponent implements OnInit {
-  ninja: String;  
-   
-  constructor(private route: ActivatedRoute) { 
-    this.ninja = route.snapshot.params['ninja'];
-   
-  }
+  ninjas = [
+    {name:"Crystal", belt: "Black"},
+    {name:"Rayu", belt: "Red"},
+    {name:"Yoshi", belt: "Purple"}
+  ]
+  constructor() {  }
 
   ngOnInit() {
   }
